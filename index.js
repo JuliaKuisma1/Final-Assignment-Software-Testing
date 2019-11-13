@@ -47,7 +47,8 @@ async function run() {
                     type: 'input',
                     message: 'Enter your favorite color:',
                     validate: (value) => {
-                        let colorArray = [ "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white" ];
+                        let colorArray = [ "black", "red", "green", "yellow", "blue",
+                                             "magenta", "cyan", "white" ];
                         if (colorArray.includes(value) === true) {
                             return true;
                         }
