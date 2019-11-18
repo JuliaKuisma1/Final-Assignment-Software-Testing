@@ -2,19 +2,14 @@ const readline = require('readline');
 const chalk = require('chalk');
 const figlet = require('figlet');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-let colorArray = [ "black", "red", "green", "yellow", "blue",
-                "gray", "magenta", "cyan", "white" ];
+let colorArray = [ "black", "red", "green", "yellow", "blue", "gray", "magenta", "cyan", "white" ];
 
-function Question() {
-};
+function Question() { };
+
+question = new Question();
 
 Question.prototype.promptUser = function promptUser() {
-    question = new Question();
-
+    const rl = question.createReadlineInterface();
     rl.question('Enter your input option (a, b, c, d): ', answer => {
         if (answer === 'a') {
             question.colorQuestion();
@@ -34,8 +29,15 @@ Question.prototype.promptUser = function promptUser() {
     });
 };
 
+Question.prototype.createReadlineInterface = () => {
+    return rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+}
+
 Question.prototype.colorQuestion = () => {
-    rl.question('Enter your favorite color: ', (answer) => {
+    rl.question('Enter your favorite color: ', answer => {
         question.validate(answer, colorArray);
     });
 };
