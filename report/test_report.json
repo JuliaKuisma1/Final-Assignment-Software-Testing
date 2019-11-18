@@ -5,9 +5,9 @@
     "passes": 6,
     "pending": 0,
     "failures": 0,
-    "start": "2019-11-18T08:22:44.351Z",
-    "end": "2019-11-18T08:22:44.464Z",
-    "duration": 113,
+    "start": "2019-11-18T09:13:37.906Z",
+    "end": "2019-11-18T09:13:38.014Z",
+    "duration": 108,
     "testsRegistered": 6,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c3b34d1a-7613-4efe-9792-ae3623998800",
+      "uuid": "a775058c-c3df-42e6-9b10-2910d07680b7",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -36,8 +36,8 @@
           "context": null,
           "code": "question = new Question();",
           "err": {},
-          "uuid": "95ba9d38-97db-4aee-9dda-5cbe727476d3",
-          "parentUUID": "c3b34d1a-7613-4efe-9792-ae3623998800",
+          "uuid": "195f53a0-dec3-4fcc-babc-2a94029dc8bf",
+          "parentUUID": "a775058c-c3df-42e6-9b10-2910d07680b7",
           "isHook": true,
           "skipped": false
         }
@@ -46,7 +46,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "032a861c-e4ae-40f6-94de-e03d77660f00",
+          "uuid": "35a9a36b-91c1-4caf-88dd-a7addf4d65e7",
           "title": "Testing first question with two wrong answer",
           "fullFile": "/home/julia/vscode/Final-Assignment-Software-Testing/test.js",
           "file": "/test.js",
@@ -57,7 +57,7 @@
               "title": "Give \"h\" as answer to first question",
               "fullTitle": "Testing first question with two wrong answer Give \"h\" as answer to first question",
               "timedOut": false,
-              "duration": 13,
+              "duration": 10,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -66,8 +66,8 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('h'+'\\x0D');\nquestion.displayMessage('Please enter input option a, b, c or d, instead of','h');\nexpect(console.log.calledWith('Please enter input option a, b, c or d, instead of h'));",
               "err": {},
-              "uuid": "65b5b194-e433-48d9-b9ff-53c25577b7a6",
-              "parentUUID": "032a861c-e4ae-40f6-94de-e03d77660f00",
+              "uuid": "8a08abb4-8b3d-4a59-9ac7-12fde17cf669",
+              "parentUUID": "35a9a36b-91c1-4caf-88dd-a7addf4d65e7",
               "isHook": false,
               "skipped": false
             },
@@ -75,7 +75,7 @@
               "title": "Give \"A\" as answer to first question",
               "fullTitle": "Testing first question with two wrong answer Give \"A\" as answer to first question",
               "timedOut": false,
-              "duration": 2,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -84,27 +84,27 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('A'+'\\x0D');\nquestion.displayMessage('Please enter input option a, b, c or d, instead of','A');\nexpect(console.log.calledWith('Please enter input option a, b, c or d, instead of A'));",
               "err": {},
-              "uuid": "7ddbd15c-8547-4a12-996a-151c9f44501d",
-              "parentUUID": "032a861c-e4ae-40f6-94de-e03d77660f00",
+              "uuid": "567ded44-4dc6-4151-989f-f36a01f85b93",
+              "parentUUID": "35a9a36b-91c1-4caf-88dd-a7addf4d65e7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "65b5b194-e433-48d9-b9ff-53c25577b7a6",
-            "7ddbd15c-8547-4a12-996a-151c9f44501d"
+            "8a08abb4-8b3d-4a59-9ac7-12fde17cf669",
+            "567ded44-4dc6-4151-989f-f36a01f85b93"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15,
+          "duration": 11,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ef3427f3-a20c-4e93-99da-b7c1231dc343",
+          "uuid": "3500d27f-1ae9-473c-a3a9-6d642b65d8f8",
           "title": "Testing core functionalities",
           "fullFile": "/home/julia/vscode/Final-Assignment-Software-Testing/test.js",
           "file": "/test.js",
@@ -115,7 +115,7 @@
               "title": "Give input of lower-case a and yellow as color",
               "fullTitle": "Testing core functionalities Give input of lower-case a and yellow as color",
               "timedOut": false,
-              "duration": 24,
+              "duration": 28,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -124,8 +124,8 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('a\\x0D');\nquestion.colorQuestion();\nrl.write('yellow\\x0D');\nexpect(console.log.calledWith('Your favorite color: yellow, what a beautiful color!\\n'));",
               "err": {},
-              "uuid": "23d6d391-334b-49ff-8982-dde4f4e1c34c",
-              "parentUUID": "ef3427f3-a20c-4e93-99da-b7c1231dc343",
+              "uuid": "8a08ce56-0a51-4385-a985-2f3834a480d4",
+              "parentUUID": "3500d27f-1ae9-473c-a3a9-6d642b65d8f8",
               "isHook": false,
               "skipped": false
             },
@@ -133,7 +133,7 @@
               "title": "input of lower-case b and baseball as sport",
               "fullTitle": "Testing core functionalities input of lower-case b and baseball as sport",
               "timedOut": false,
-              "duration": 5,
+              "duration": 4,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -142,8 +142,8 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('b'+'\\x0D');\nquestion.sportQuestion();\nrl.write('baseball'+'\\x0D');\nexpect(console.log.calledWith('Your favorite sport: baseball'));",
               "err": {},
-              "uuid": "935435bd-6bb1-4e1e-92ca-e919475fff8e",
-              "parentUUID": "ef3427f3-a20c-4e93-99da-b7c1231dc343",
+              "uuid": "b90ffb92-39a8-42d9-842d-9337fb2e0af7",
+              "parentUUID": "3500d27f-1ae9-473c-a3a9-6d642b65d8f8",
               "isHook": false,
               "skipped": false
             },
@@ -151,7 +151,7 @@
               "title": "input of lower-case c",
               "fullTitle": "Testing core functionalities input of lower-case c",
               "timedOut": false,
-              "duration": 24,
+              "duration": 28,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -160,8 +160,8 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('c'+'\\x0D');\nexpect(console.log.calledWith('Shutting down...\\nZzZzZz...'))",
               "err": {},
-              "uuid": "deb520a8-6073-4e1a-979b-5cc85b70a6f8",
-              "parentUUID": "ef3427f3-a20c-4e93-99da-b7c1231dc343",
+              "uuid": "0b4266e5-7973-451c-89d7-b550f1b9542e",
+              "parentUUID": "3500d27f-1ae9-473c-a3a9-6d642b65d8f8",
               "isHook": false,
               "skipped": false
             },
@@ -178,23 +178,23 @@
               "context": null,
               "code": "question.promptUser();\nrl.write('d'+'\\x0D');\nexpect(console.log.calledWith('black, red, green, yellow, blue, gray, magenta, cyan, white'));",
               "err": {},
-              "uuid": "3a7b1cfb-95ea-494a-bdc9-9a69fdca304d",
-              "parentUUID": "ef3427f3-a20c-4e93-99da-b7c1231dc343",
+              "uuid": "a98567c3-3a3d-4487-a13b-57fa886962e3",
+              "parentUUID": "3500d27f-1ae9-473c-a3a9-6d642b65d8f8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "23d6d391-334b-49ff-8982-dde4f4e1c34c",
-            "935435bd-6bb1-4e1e-92ca-e919475fff8e",
-            "deb520a8-6073-4e1a-979b-5cc85b70a6f8",
-            "3a7b1cfb-95ea-494a-bdc9-9a69fdca304d"
+            "8a08ce56-0a51-4385-a985-2f3834a480d4",
+            "b90ffb92-39a8-42d9-842d-9337fb2e0af7",
+            "0b4266e5-7973-451c-89d7-b550f1b9542e",
+            "a98567c3-3a3d-4487-a13b-57fa886962e3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 57,
+          "duration": 64,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -217,7 +217,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "mochawesome",
+        "reportFilename": "test_report",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -226,7 +226,12 @@
       "version": "4.1.0"
     },
     "marge": {
-      "options": null,
+      "options": {
+        "reportDir": "./report",
+        "reportFilename": "test_report",
+        "autoOpen": "true",
+        "reportPageTitle": "Final Assignment - Software Testing"
+      },
       "version": "4.0.1"
     }
   }
