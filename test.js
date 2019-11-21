@@ -2,7 +2,6 @@ const Question = require('./question');
 const chai = require('chai');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
-const addContext = require('mochawesome/src/addContext');
 const expect = chai.expect;
 chai.use(sinonChai);
 
@@ -16,16 +15,14 @@ describe('Testing first question with two wrong answer', () => {
 
     it('Give "h" as answer to first question', () => {
         question.promptUser();
-        rl.write('h'+'\x0D');
-        question.displayMessage('Please enter input option a, b, c or d, instead of','h');
-        expect(console.log.calledWith('Please enter input option a, b, c or d, instead of h'));
+        rl.write('h\x0D');
+        expect(console.log.calledWith('Please enter input option a, b, c or d, instead of h\n'));
     });
 
     it('Give "A" as answer to first question', () => {
         question.promptUser();
         rl.write('A'+'\x0D');
-        question.displayMessage('Please enter input option a, b, c or d, instead of','A');
-        expect(console.log.calledWith('Please enter input option a, b, c or d, instead of A'));
+        expect(console.log).to.not.have.property('Please enter input option a, b, c or d, instead of A');
     });
 });
 
