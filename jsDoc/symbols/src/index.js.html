@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/**
+<span class='line'>  2</span>  * @file Console Application main function that lanches app. 
+<span class='line'>  3</span>  * @author Julia Kuisma &lt;julia.kuisma@student.lamk.fi>
+<span class='line'>  4</span>  */</span><span class="WHIT">
+<span class='line'>  5</span> 
+<span class='line'>  6</span> </span><span class="COMM">/** Readline module @tutorial https://nodejs.org/api/readline.html */</span><span class="WHIT">
+<span class='line'>  7</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">readline</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">require</span><span class="PUNC">(</span><span class="STRN">'readline'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>  8</span> </span><span class="COMM">/** chalk library @tutorial https://github.com/chalk/chalk */</span><span class="WHIT">
+<span class='line'>  9</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">chalk</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">require</span><span class="PUNC">(</span><span class="STRN">'chalk'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 10</span> </span><span class="COMM">/** figlet library @tutorial https://github.com/patorjk/figlet.js#readme */</span><span class="WHIT">
+<span class='line'> 11</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">figlet</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">require</span><span class="PUNC">(</span><span class="STRN">'figlet'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">/**
+<span class='line'> 13</span>  * @file Console Application, Question module, that runs question logic. 
+<span class='line'> 14</span>  * @author Julia Kuisma &lt;julia.kuisma@student.lamk.fi>
+<span class='line'> 15</span>  */</span><span class="WHIT">
+<span class='line'> 16</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">Question</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">require</span><span class="PUNC">(</span><span class="STRN">'./question'</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 17</span> 
+<span class='line'> 18</span> </span><span class="COMM">/** 
+<span class='line'> 19</span>  * startUp function starts all functionalities of application. It calls clear and console log to 
+<span class='line'> 20</span>  * output title and user options. Then it calls question module and promptUser.
+<span class='line'> 21</span>  */</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="NAME">startUp</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="PUNC">></span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">    </span><span class="NAME">clear</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="WHIT">    </span><span class="NAME">console.log</span><span class="PUNC">(</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="WHIT">        </span><span class="NAME">chalk.cyanBright.bgBlue</span><span class="PUNC">(</span><span class="NAME">figlet.textSync</span><span class="PUNC">(</span><span class="STRN">'SOFTWARE TESTING'</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="NAME">horizontalLayout</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">'full'</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="WHIT">        </span><span class="NAME">chalk.black</span><span class="PUNC">(</span><span class="STRN">'\n'</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="WHIT">        </span><span class="NAME">chalk.magentaBright</span><span class="PUNC">(</span><span class="NAME">figlet.textSync</span><span class="PUNC">(</span><span class="STRN">'OPTIONS:'</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="NAME">horizontalLayout</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">'full'</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">        </span><span class="NAME">chalk.white</span><span class="PUNC">(</span><span class="STRN">'\n a - pick a '</span><span class="PUNC">+</span><span class="NAME">chalk.red</span><span class="PUNC">(</span><span class="STRN">'c'</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="NAME">chalk.yellow</span><span class="PUNC">(</span><span class="STRN">'o'</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="NAME">chalk.green</span><span class="PUNC">(</span><span class="STRN">'l'</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="NAME">chalk.cyan</span><span class="PUNC">(</span><span class="STRN">'o'</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 29</span> </span><span class="WHIT">                </span><span class="PUNC">+</span><span class="NAME">chalk.blue</span><span class="PUNC">(</span><span class="STRN">'r'</span><span class="PUNC">)</span><span class="PUNC">+</span><span class="STRN">'\n b - favorite sport\n c - close software\n'</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="WHIT">    </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">    </span><span class="NAME">question</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Question</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">    </span><span class="NAME">question.promptUser</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 34</span> 
+<span class='line'> 35</span> </span><span class="NAME">startUp</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span></pre></body></html>

@@ -4,7 +4,7 @@
   "description": "final assignment for software testing course",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js --reporter mochawesome --reporter-options reportDir=./report,reportFilename=test_report,autoOpen=true,reportPageTitle='Final Assignment - Software Testing' --exit"
+    "test": "mocha test.js --reporter mochawesome --reporter-options reportDir=./report,reportFilename=test_report,reportPageTitle='Final Assignment - Software Testing' --exit"
   },
   "keywords": [
     "node",
@@ -21,8 +21,7 @@
     "lodash": "^4.17.15",
     "mocha": "^6.2.2",
     "sinon": "^7.5.0",
-    "sinon-chai": "^3.3.0",
-    "touch": "^3.1.0"
+    "sinon-chai": "^3.3.0"
   },
   "devDependencies": {
     "mochawesome": "^4.1.0"

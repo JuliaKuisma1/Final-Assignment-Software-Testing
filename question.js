@@ -1,17 +1,12 @@
-/**
- * Console Application
- * @author Julia Kuisma <julia.kuisma@student.lamk.fi>
- */
-
-/**
- * Required libraries (readline, chalk, figlet) and color array
- */
 const readline = require('readline');
 const chalk = require('chalk');
 const figlet = require('figlet');
 let colorArray = [ "black", "red", "green", "yellow", "blue", "gray", "magenta", "cyan", "white" ];
 
-/** @constructor for Question object. */
+/** 
+ * Question object constructor. Used to access Question functions.
+ * @constructor 
+ */
 function Question() { };
 question = new Question();
 

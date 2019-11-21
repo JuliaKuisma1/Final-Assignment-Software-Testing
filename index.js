@@ -1,6 +1,18 @@
+/**
+ * @file Console Application main function that lanches app. 
+ * @author Julia Kuisma <julia.kuisma@student.lamk.fi>
+ */
+
+/** Readline module @tutorial https://nodejs.org/api/readline.html */
+const readline = require('readline');
+/** chalk library @tutorial https://github.com/chalk/chalk */
 const chalk = require('chalk');
-const clear = require('clear');
+/** figlet library @tutorial https://github.com/patorjk/figlet.js#readme */
 const figlet = require('figlet');
+/**
+ * @file Console Application, Question module, that runs question logic. 
+ * @author Julia Kuisma <julia.kuisma@student.lamk.fi>
+ */
 const Question = require('./question')
 
 /** 
@@ -9,7 +21,6 @@ const Question = require('./question')
  */
 startUp = () => {
     clear();
-
     console.log(
         chalk.cyanBright.bgBlue(figlet.textSync('SOFTWARE TESTING', {horizontalLayout: 'full'}))+
         chalk.black('\n')+
@@ -17,7 +28,6 @@ startUp = () => {
         chalk.white('\n a - pick a '+chalk.red('c')+chalk.yellow('o')+chalk.green('l')+chalk.cyan('o')
                 +chalk.blue('r')+'\n b - favorite sport\n c - close software\n')
     );
-
     question = new Question();
     question.promptUser();
 }
