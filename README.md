@@ -20,15 +20,15 @@ Use the github Clone with HTTPS to install this project:
 git clone https://github.com/JuliaKuisma1/Final-Assignment-Software-Testing.git
 ```
 Then install all node modules using command:
-```npm
+```bash
 npm install
 ```
 Then run the application by command:
-```npm
-npm run
+```bash
+npm start
 ```
 To run the tests, use command:
-```npm
+```bash
 npm test
 ```
 
