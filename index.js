@@ -3,12 +3,12 @@
  * @author Julia Kuisma <julia.kuisma@student.lamk.fi>
  */
 
-/** Readline module @tutorial https://nodejs.org/api/readline.html */
-const readline = require('readline');
 /** chalk library @tutorial https://github.com/chalk/chalk */
 const chalk = require('chalk');
 /** figlet library @tutorial https://github.com/patorjk/figlet.js#readme */
 const figlet = require('figlet');
+/** clear library @tutorial https://github.com/bahamas10/node-clear#readme*/
+const clear = require('clear');
 /**
  * @file Console Application, Question module, that runs question logic. 
  * @author Julia Kuisma <julia.kuisma@student.lamk.fi>
@@ -30,6 +30,6 @@ startUp = () => {
     );
     question = new Question();
     question.promptUser();
-}
+};
 
 startUp();

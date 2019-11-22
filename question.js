@@ -1,3 +1,4 @@
+/** Readline module @tutorial https://nodejs.org/api/readline.html */
 const readline = require('readline');
 const chalk = require('chalk');
 const figlet = require('figlet');
@@ -104,7 +105,8 @@ Question.prototype.validate = (value, array) => {
         question.promptUser();
     }
     else {
-        console.log(chalk.red('Enter correct color!\n'));
+        //console.log(chalk.red('Enter correct color!\n'));
+        question.displayMessage('Enter correct color, not:',value,'error');
         question.colorQuestion();
     }
 };
@@ -118,12 +120,11 @@ Question.prototype.validate = (value, array) => {
  */
 Question.prototype.displayMessage = (message, value, type) => {
     if(type == 'error') {
-        console.log(chalk.red(message, value + '\n'));
+        return console.log(chalk.red(message, value + '!\n'));
     }
     else {
-        console.log(chalk.green(message, value + '\n'));
+        return console.log(chalk.green(message, value + '\n'));
     }
-    question.promptUser();
 };
 
 module.exports = Question;

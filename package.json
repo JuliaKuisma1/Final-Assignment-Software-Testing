@@ -4,7 +4,8 @@
   "description": "final assignment for software testing course",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js --reporter mochawesome --reporter-options reportDir=./report,reportFilename=test_report,reportPageTitle='Final Assignment - Software Testing' --exit"
+    "test": "mocha test.js --reporter mochawesome --reporter-options reportDir=./report,reportFilename=test_report,reportPageTitle='Final Assignment - Software Testing' --exit",
+    "run": "node index.js"
   },
   "keywords": [
     "node",
