@@ -1,8 +1,6 @@
 # Final Assignment - Software Testing
 
 ## Table of Contents
-- [Final Assignment - Software Testing](#Final-Assignment---Software-Testing)
-  - [Table of Contents](#Table-of-Contents)
   - [About the Project](#About-the-Project)
   - [Installation](#Installation)
   - [Usage](#Usage)
